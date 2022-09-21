@@ -74,6 +74,10 @@ class BusinessLoanEvent {
         this.loanEventType = loanEventType;
     }
 
+    override fun toString(): String {
+        return "BusinessLoanEvent(businessLoanId=$businessLoanId, businessName=$businessName, customerMobileNo=$customerMobileNo, loanName=$loanName, loanamount=$loanamount, rateOfInterest=$rateOfInterest, status=$status, loanEventType=$loanEventType)"
+    }
+
     constructor(){}
     constructor(businessLoanId: String?,businessName: String?,customerMobileNo: Long?,loanName: String?,loanamount: Int?,rateOfInterest: Double?,status: String?,loanEventType: LoanEventType?){
         this.businessLoanId=businessLoanId

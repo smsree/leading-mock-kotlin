@@ -72,6 +72,11 @@ class VehicleLoanEvent {
     fun setLoanEventType(loanEventType: LoanEventType?){
         this.loanEventType = loanEventType;
     }
+
+    override fun toString(): String {
+        return "VehicleLoanEvent(vehicleLoanId=$vehicleLoanId, vehicleName=$vehicleName, customerMobileNo=$customerMobileNo, loanName=$loanName, loanamount=$loanamount, rateOfInterest=$rateOfInterest, status=$status, loanEventType=$loanEventType)"
+    }
+
     constructor(){}
     constructor(vehicleLoanId: String?,vehicleName: String?,customerMobileNo: Long?,loanName: String?,loanamount: Int?,rateOfInterest: Double?,status: String?,loanEventType: LoanEventType?){
         this.vehicleLoanId=vehicleLoanId
@@ -83,4 +88,5 @@ class VehicleLoanEvent {
         this.status=status
         this.loanEventType=loanEventType
     }
+
 }
