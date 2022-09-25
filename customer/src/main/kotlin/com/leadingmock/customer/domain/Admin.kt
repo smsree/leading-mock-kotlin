@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 class Admin {
     @Id
     private var adminId:String? = null
+
     private var adminName:String? = null
     private var adminPassword:String? = null
     private var isApproved:Boolean? = false;

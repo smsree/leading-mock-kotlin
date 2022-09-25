@@ -1,6 +1,7 @@
 package com.leadingmock.customer.domain
 
 import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.index.Indexed
 import org.springframework.data.mongodb.core.mapping.Document
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
@@ -15,6 +16,7 @@ class Customer {
     private var name:String? = null
     @NotNull()
     @Positive(message = "The Phone Number cannot be blank and it should be a positive value")
+    @Indexed(unique = true)
     private var phoneNumber:Long? = null
     @NotBlank(message = "The customer Email cannot be blank")
     private var email:String? = null

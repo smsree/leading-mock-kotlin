@@ -15,3 +15,4 @@ spring:
       host: localhost
       port: 27017
       database: local
+      auto-index-creation: true
